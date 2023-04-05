@@ -1,0 +1,6 @@
+trigger AccountAddressTrigger on Account (before insert) {
+    if(trigger.isbefore && Trigger.isinsert){
+        AccountAddressTriggerHandler.beforeinsertrecords(trigger.new)
+    }
+
+}
